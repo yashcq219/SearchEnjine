@@ -1,0 +1,6 @@
+[submodule "server/externals/ds_library"]
+	path = server/externals/ds_library
+	url = https://github.com/SuperCodersOrg/ds_library-Yash.git
+[submodule "server/externals/Crawler"]
+	path = server/externals/Crawler
+	url = https://github.com/SuperCodersOrg/Crawler-YashCQ.git

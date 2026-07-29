@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchEngine - Fast & Reliable Web Search</title>
+    <meta name="description" content="High-performance C++ powered web search engine featuring real-time index querying and ranked search results.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Modular CSS Component Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/searchbar.css">
+    <link rel="stylesheet" href="css/results.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <!-- Background Ambient Glow Effects -->
+    <div class="ambient-bg">
+        <div class="ambient-blob-1"></div>
+        <div class="ambient-blob-2"></div>
+    </div>
+
+    <div id="app-container">
+
+        <!-- Top Navigation Bar Component -->
+        <header class="navbar">
+            <div class="nav-brand" id="nav-brand" title="Return to Search Engine Home">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <span class="brand-name">SearchEnjine</span>
+            </div>
+
+            <div class="nav-actions">
+                <!-- Server Health Status Badge -->
+                <div class="health-badge" id="health-badge" title="Live status of C++ SearchEngine server backend">
+                    <span class="health-dot"></span>
+                    <span id="health-text">Checking Backend...</span>
+                </div>
+
+                <!-- Theme Switcher Button -->
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Light / Dark Mode">
+                    <i class="fa-solid fa-sun" id="theme-icon"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content View -->
+        <main class="main-content" id="main-content">
+
+            <!-- Search Section Component -->
+            <section class="search-section">
+                <h1 class="hero-title">Discover the Web</h1>
+                <p class="hero-subtitle">High-performance C++ ranking engine & inverted index search</p>
+
+                <form class="search-form" id="search-form" autocomplete="off">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon-left">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            class="search-input" 
+                            placeholder="Type your search query..." 
+                            aria-label="Search Input"
+                            autofocus
+                        >
+                        <button type="button" class="search-clear-btn" id="search-clear-btn" aria-label="Clear Search Input">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button type="submit" class="search-submit-btn">
+                            <span>Search</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Quick Search Tags -->
+                <div class="tag-chips" id="tag-chips">
+                    <button class="tag-chip" data-query="machine">machine</button>
+                    <button class="tag-chip" data-query="computer">computer</button>
+                    <button class="tag-chip" data-query="algorithm">algorithm</button>
+                    <button class="tag-chip" data-query="data structures">data structures</button>
+                    <button class="tag-chip" data-query="indexer">indexer</button>
+                </div>
+            </section>
+
+            <!-- Results Section Component -->
+            <section class="results-container" id="results-container">
+                <div class="stats-banner" id="stats-banner" style="display: none;"></div>
+                <!-- Dynamic Results or Skeleton Loaders render here -->
+            </section>
+
+        </main>
+
+        <!-- Footer Component -->
+        <footer class="footer">
+            <div>
+                © 2026 <strong>SearchEnjine</strong> — C++ Crow & Inverted Index REST API Backend
+            </div>
+            <div class="footer-links">
+                <a href="http://localhost:18080/health" target="_blank" class="footer-link">API Health</a>
+                <a href="http://localhost:18080/search?q=test" target="_blank" class="footer-link">Sample REST Query</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Application Entry Point JS -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

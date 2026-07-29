@@ -183,9 +183,9 @@ bool IndexLoader::hasWord(const std::string& word) const {
     return m_index.exist(word);
 }
 
-DynamicArray<Posting> IndexLoader::getPostings(const std::string& word) {
+DynamicArray<Posting> IndexLoader::getPostings(const std::string& word) const {
     if (!m_isLoaded || !m_index.exist(word)) {
-        return nullptr;
+        return DynamicArray<Posting>();
     }
     DynamicArray<Posting> postings = m_index.get(word);
     return postings;

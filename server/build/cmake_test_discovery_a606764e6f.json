@@ -1,0 +1,32 @@
+{
+  "tests": 4,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "SearchServerTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "HealthEndpointReturnsServerRunning",
+          "file": "D:\\projects\\SearchEngine\\server\\tests\\SearchServerTest.cpp",
+          "line": 21
+        },
+        {
+          "name": "SearchEndpointMissingQueryParameterReturns400",
+          "file": "D:\\projects\\SearchEngine\\server\\tests\\SearchServerTest.cpp",
+          "line": 33
+        },
+        {
+          "name": "SearchEndpointEmptyQueryReturnsEmptyResults",
+          "file": "D:\\projects\\SearchEngine\\server\\tests\\SearchServerTest.cpp",
+          "line": 45
+        },
+        {
+          "name": "SearchEndpointValidQueryReturnsResponse",
+          "file": "D:\\projects\\SearchEngine\\server\\tests\\SearchServerTest.cpp",
+          "line": 59
+        }
+      ]
+    }
+  ]
+}
